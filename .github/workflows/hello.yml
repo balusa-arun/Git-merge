@@ -10,7 +10,7 @@ jobs:
         run: echo "Hi I am Arun, saying hello to github"
       
       - name: print second message
-        run: echo "entering the second message, and executing it at $date"
+        run: echo "entering the second message, and executing it at" date
 
       - name: print current date
         run: date
