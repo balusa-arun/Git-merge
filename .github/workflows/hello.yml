@@ -1,0 +1,16 @@
+name: Myfirst github actions
+on:
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print hello message
+        run: echo "Hi I am Arun, saying hello to github"
+      
+      - name: print second message
+        run: echo "entering the second message, and executing it at $date"
+
+      - name: print current date
+        run: date
