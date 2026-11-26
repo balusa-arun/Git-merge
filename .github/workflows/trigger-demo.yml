@@ -1,0 +1,34 @@
+name: GitHub Actions Trigger Demo
+
+run-name: Triggered by ${{ github.actor }} on ${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  understand-triggers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show trigger event
+        run: echo "Event is $GITHUB_EVENT_NAME"
+
+      - name: Show branch or ref
+        run: echo "Ref is $GITHUB_REF"
+
+      - name: Show GitHub user
+        run: echo "Triggered by $GITHUB_ACTOR"
+
+      - name: Show workflow name
+        run: echo "Workflow is $GITHUB_WORKFLOW"
